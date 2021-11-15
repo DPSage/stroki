@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "firstName": "Admin",
+  "secondName": "Admin",
+  "username": "admin",
+  "password": "очень сложный пароль",
+  "rolesRq": [
+    {
+      "id": 2,
+      "name": "ROLE_USER"
+    },
+    {
+      "id": 3,
+      "name": "ROLE_ADMIN"
+    }
+  ],
+  "linksRq": [
+    {
+      "id": 4,
+      "fullUrl": "https://www.google.com",
+      "shortUrl": "http://localhost:8080/50328aa4",
+      "redirectCount": 0
+    },
+    {
+      "id": 5,
+      "fullUrl": "https://www.youtube.com",
+      "shortUrl": "http://localhost:8080/e7f83ee8",
+      "redirectCount": 0
+    },
+    {
+      "id": 6,
+      "fullUrl": "https://www.facebook.com",
+      "shortUrl": "http://localhost:8080/e2f2ba79",
+      "redirectCount": 0
+    },
+    {
+      "id": 7,
+      "fullUrl": "https://www.wikipedia.org",
+      "shortUrl": "http://localhost:8080/8159d26f",
+      "redirectCount": 0
+    }
+  ]
+}

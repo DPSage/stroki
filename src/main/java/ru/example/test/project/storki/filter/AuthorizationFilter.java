@@ -48,8 +48,6 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     private final List<String> skipFilterUrl = new ArrayList<>() {{
         add("/api/user/registration");
         add("/v3/api-docs");
-        add("/swagger-ui");
-        add("/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config");
     }};
 
     /**
@@ -67,7 +65,8 @@ public class AuthorizationFilter extends OncePerRequestFilter {
      */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if (skipFilterUrl.contains(request.getServletPath()) || request.getServletPath().matches("^/\\w+$")) {
+        if (skipFilterUrl.contains(request.getServletPath()) || request.getServletPath().startsWith("/s/")
+                || request.getServletPath().startsWith("/swagger-ui")) {
             filterChain.doFilter(request, response);
         } else {
             String authorizationHeader = request.getHeader(AUTHORIZATION);

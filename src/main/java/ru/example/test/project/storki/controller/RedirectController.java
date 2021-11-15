@@ -3,6 +3,7 @@ package ru.example.test.project.storki.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.example.test.project.storki.exception.AppException;
 import ru.example.test.project.storki.service.api.LinkService;
@@ -12,6 +13,7 @@ import java.io.IOException;
 
 @Slf4j
 @RestController
+@RequestMapping("/s")
 public class RedirectController {
 
     private final LinkService linkService;

@@ -33,7 +33,7 @@ public class LinkServiceImpl implements LinkService {
     public LinkServiceImpl(LinkRepo linkRepo, UserRepo userRepo, AppProperties appProperties) {
         this.linkRepo = linkRepo;
         this.userRepo = userRepo;
-        prefixUrl = String.format("http://%s:%s/", appProperties.getHost(), appProperties.getPort());
+        prefixUrl = String.format("http://%s:%s/s/", appProperties.getHost(), appProperties.getPort());
     }
 
     @Override

@@ -53,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private void settingAuthorizeRequests(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/login/**", "/**", "/api/user/registration/**")
+                .antMatchers("/login/**", "/s/**", "/api/user/registration/**", "/v3/api-docs/**", "/swagger-ui.html/**")
                 .permitAll();
 
         http.authorizeRequests()
